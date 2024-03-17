@@ -1,0 +1,15 @@
+﻿insert into animals (id, name, category, age, date_of_birth) values (1, 'rhino', 'mammal', 79, '2012-02-11');
+insert into animals (id, name, category, age, date_of_birth) values (2, 'hippo', 'fish', 52, '2021-11-03');
+insert into animals (id, name, category, age, date_of_birth) values (3, 'tiger', 'fish', 94, '2018-12-04');
+insert into animals (id, name, category, age, date_of_birth) values (4, 'hippo', 'amphibian', 100, '2003-01-06');
+insert into animals (id, name, category, age, date_of_birth) values (5, 'panda', 'reptile', 60, '2011-08-19');
+insert into animals (id, name, category, age, date_of_birth) values (6, 'kangaroo', 'bird', 92, '2015-12-28');
+insert into animals (id, name, category, age, date_of_birth) values (7, 'monkey', 'bird', 74, '2010-08-07');
+insert into animals (id, name, category, age, date_of_birth) values (8, 'tiger', 'bird', 64, '2009-05-24');
+insert into animals (id, name, category, age, date_of_birth) values (9, 'zebra', 'mammal', 49, '2004-04-22');
+insert into animals (id, name, category, age, date_of_birth) values (10, 'hippo', 'fish', 90, '2006-08-03');
+insert into animals (id, name, category, age, date_of_birth) values (11, 'elephant', 'invertebrate', 52, '2022-12-17');
+insert into animals (id, name, category, age, date_of_birth) values (12, 'panda', 'bird', 48, '2020-01-09');
+insert into animals (id, name, category, age, date_of_birth) values (13, 'rhino', 'reptile', 92, '2015-07-06');
+insert into animals (id, name, category, age, date_of_birth) values (14, 'hippo', 'bird', 7, '2010-09-01');
+insert into animals (id, name, category, age, date_of_birth) values (15, 'panda', 'reptile', 66, '2016-07-27');
