@@ -99,3 +99,4 @@ E:\mycode\asp.net\initiere\ZooCrudApi\ZooCrudApi\obj\Debug\net6.0\refint\ZooCrud
 E:\mycode\asp.net\initiere\ZooCrudApi\ZooCrudApi\obj\Debug\net6.0\ZooCrudApi.pdb
 E:\mycode\asp.net\initiere\ZooCrudApi\ZooCrudApi\obj\Debug\net6.0\ZooCrudApi.genruntimeconfig.cache
 E:\mycode\asp.net\initiere\ZooCrudApi\ZooCrudApi\obj\Debug\net6.0\ref\ZooCrudApi.dll
+E:\mycode\asp.net\initiere\ZooCrudApi\ZooCrudApi\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll

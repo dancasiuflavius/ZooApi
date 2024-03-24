@@ -52,17 +52,23 @@ namespace ZooCrudApi.Animals.Controller
 
 
         }
-        [HttpPost("api/v1/sortByName")]
+        [HttpGet("api/v1/sortByName")]
         public async Task<ActionResult<Animal>> SortAllByName()
         {
             var animal = await _animalRepository.SortAllByName();
             return Ok(animal);
         }
         [HttpGet("api/v1/sorting/{exemple}")]
-        public async Task<ActionResult<Animal>> SortByChoice([FromRoute] string choice)
+        public async Task<ActionResult<Animal>> SortByChoice([FromRoute] string exemple)
         {
-            var animal = await _animalRepository.SortByUsersChoice(choice);
+            var animal = await _animalRepository.SortByUsersChoice(exemple);
             return Ok(animal);
+        }
+        [HttpDelete("api/v1/delete/{id}")]
+        public async Task Delete([FromRoute] int id)
+        {
+             await _animalRepository.DeleteAsync(id);
+            
         }
     }
 }

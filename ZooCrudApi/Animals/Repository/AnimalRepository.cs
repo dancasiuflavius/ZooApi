@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using System.Linq.Dynamic.Core;
 using Microsoft.EntityFrameworkCore;
 using ZooCrudApi.Animals.DTO;
 using ZooCrudApi.Animals.Model;
@@ -51,18 +52,41 @@ namespace ZooCrudApi.Animals.Repository
         {
             return await _context.Animals.OrderBy(animal => animal.Name).ToListAsync();
         }
-        public async Task<IEnumerable<Animal>> SortByUsersChoice(string parametre)
+        public async Task<IEnumerable<Animal>> SortByUsersChoice(string propertyName)
         {
             try
             {
-                return await _context.Animals.Where(animal => animal.Equals(parametre)).ToListAsync();
+                var propertyInfo = typeof(Animal).GetProperty(propertyName);
+                if (propertyInfo == null)
+                {
+                    throw new ArgumentException($"Property '{propertyName}' not found in Animal class.");
+                }
+
+                var animals = await _context.Animals
+                    .AsQueryable()
+                    .OrderBy($"{propertyName} ASC")
+                    .ToListAsync();
+
+                return animals;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Eroare la filtrare. Verificati parametrul : " + ex.Message);
-                return await _context.Animals.ToListAsync();
+                Console.WriteLine($"Error while sorting. Please check the parameter: {ex.Message}");
+                return new List<Animal>();
             }
+        }
+        public async Task<Animal> FindAnimal(int id)
+        {
+
+            return await _context.Animals.FindAsync(id);
             
+        }
+        public async Task DeleteAsync(int id)
+        {
+            var product = await _context.Animals.FindAsync(id);
+
+            _context.Animals.Remove(product);
+            await _context.SaveChangesAsync();
         }
     }
 }

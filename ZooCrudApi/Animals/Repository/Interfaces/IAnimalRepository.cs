@@ -12,8 +12,9 @@ namespace ZooCrudApi.Animals.Repository.Interfaces
         //Task<Product> GetByIdAsync(int id);
         Task<Animal> CreateAsync(CreateAnimalRequest animalRequest);
         Task<IEnumerable<Animal>> SortAllByName();
+        Task<Animal> FindAnimal(int id);
         //Task<Product> UpdateAsync(int id, UpdateProductRequest productRequest);
-        //Task DeleteAsync(int id);
+        Task DeleteAsync(int id);
         Task<IEnumerable<Animal>> SortByUsersChoice(string parametre);
     }
 }
